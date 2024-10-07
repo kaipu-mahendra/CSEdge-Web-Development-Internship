@@ -1,0 +1,167 @@
+/* Base Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Navigation Menu Styling */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  padding: 15px 0;
+}
+
+nav ul.main-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul.main-menu li {
+  position: relative;
+  margin: 0 20px;
+}
+
+nav ul.main-menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul.main-menu li a:hover {
+  background-color: #ff6347;
+  border-radius: 5px;
+}
+
+nav ul.main-menu li.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Dropdown Menu Styling */
+nav ul.main-menu li .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 10px 0;
+  z-index: 1001;
+  border-radius: 5px;
+}
+
+nav ul.main-menu li .dropdown-menu li {
+  width: 200px;
+  margin: 0;
+}
+
+nav ul.main-menu li .dropdown-menu li a {
+  padding: 10px 20px;
+  display: block;
+}
+
+nav ul.main-menu li .dropdown-menu li a:hover {
+  background-color: #ff6347;
+}
+
+/* Parallax sections styling */
+.parallax {
+  height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+
+
+/* Content in parallax sections */
+.content {
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5); /* Overlay for readability */
+  padding: 20px;
+  border-radius: 10px;
+  animation: fade-in 2s ease-in-out;
+}
+
+h1 {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.5em;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Content Sections */
+.content-section {
+  padding: 60px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.content-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.content-section p {
+  font-size: 1.3em;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Fade-in Animation */
+@keyframes fade-in {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fade-in 1.5s forwards;
+}
+
+/* Responsive Styling */
+@media only screen and (max-width: 768px) {
+  nav ul.main-menu {
+      flex-direction: column;
+  }
+
+  nav ul.main-menu li {
+      margin: 10px 0;
+  }
+
+  h1 {
+      font-size: 2.5em;
+  }
+
+  p {
+      font-size: 1em;
+  }
+}
